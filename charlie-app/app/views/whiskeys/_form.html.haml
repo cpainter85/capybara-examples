@@ -1,0 +1,16 @@
+.container
+  =form_for @whiskey do |f|
+    .form-group
+      =f.label :name
+      =f.text_field :name, class: 'form-control'
+    .form-group
+      =f.label :whiskey_type, 'Type'
+      =f.text_field :whiskey_type, class: 'form-control'
+    .form-group
+      =f.label :place_of_origin, 'Place of Origin'
+      =f.text_field :place_of_origin, class: 'form-control'
+    .form-group
+      =f.label :proof
+      =f.number_field :proof, class: 'form-control', step: 0.1
+    .form-group
+      =f.submit submit, class: 'btn btn-primary'

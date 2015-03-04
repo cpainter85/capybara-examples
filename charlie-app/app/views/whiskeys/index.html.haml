@@ -1,0 +1,18 @@
+.container
+  .page-header
+    %h1 List of Whiskeys (and Whiskies)
+  =link_to 'New Whiskey/Whisky', new_whiskey_path, class: 'btn btn-primary'
+  %table.table.table-striped
+    %thead
+      %tr
+        %th Name
+        %th Type
+        %th Place of Origin
+        %th Proof
+    %tbody
+      -@whiskeys.each do |whiskey|
+        %tr
+          %td=link_to whiskey.name, whiskey_path(whiskey)
+          %td=whiskey.whiskey_type
+          %td=whiskey.place_of_origin
+          %td=number_with_precision(whiskey.proof, :precision => 1)

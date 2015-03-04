@@ -1,0 +1,17 @@
+.container
+  %p
+    %strong Name:
+    =@whiskey.name
+  %p
+    %strong Type:
+    =@whiskey.whiskey_type
+  %p
+    %strong Place of Origin:
+    =@whiskey.place_of_origin
+  %p
+    %strong Proof:
+    =@whiskey.proof
+  %p
+    =link_to 'Back', whiskeys_path, class: 'btn btn-default'
+    =link_to 'Edit', edit_whiskey_path(@whiskey), class: 'btn btn-primary'
+    =link_to 'Delete', whiskey_path(@whiskey), method: :delete, class: 'btn btn-danger'
